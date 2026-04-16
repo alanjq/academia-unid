@@ -1,0 +1,13 @@
+a{
+    display: block;
+    padding: 1em;
+    background-color: rgb(24, 60, 91);
+    margin-bottom: 1px;
+    text-decoration: none;
+    color: white;
+    user-select: none;
+}
+a:hover{
+    background-color: rgb(49, 111, 166);
+    color: rgb(242, 255, 189);
+}
