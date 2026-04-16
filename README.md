@@ -16,3 +16,4 @@ Este es un proyecto de desarrollo web desde cero.
 
 **nav** - Barra de navegación
 
+ver archivos batch y scripts
