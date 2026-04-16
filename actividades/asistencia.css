@@ -1,0 +1,12 @@
+.presente {
+    background-color: rgb(167, 236, 63);
+}
+ol li {
+    padding: 1em;
+    cursor: pointer;
+    user-select: none;
+}
+ol li:active {
+    background-color: rgb(157, 213, 74);
+    color:rgb(36, 35, 35);
+}
