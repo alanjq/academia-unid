@@ -17,3 +17,35 @@ Este es un proyecto de desarrollo web desde cero.
 **nav** - Barra de navegación
 
 ver archivos batch y scripts
+
+## Estructura del sitio
+
+```
+./
+├── README.md
+├── actividades
+│   ├── Portada.png
+│   ├── actividad.html
+│   ├── imagen-portada.jpg
+│   ├── aleatorios.html
+│   ├── asistencia.css
+│   ├── asistencia.html
+│   ├── asistencia.js
+│   ├── index.css
+│   ├── index.html
+│   └── revista.html
+├── app.css
+├── app.js
+├── bloques
+│   ├── bloques.css
+│   └── index.html
+├── educacion
+│   └── index.html
+├── hobbies
+│   └── index.html
+├── index.html
+└── informacion
+    └── index.html
+```
+
+
