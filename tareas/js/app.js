@@ -9,7 +9,7 @@ const web = {
         // Agregar los estilos
         const estilos = document.createElement('link')
         estilos.rel = 'stylesheet'
-        estilos.href = '/app.css'
+        estilos.href = '/css/app.css'
 
         document.head.append(estilos)
     },

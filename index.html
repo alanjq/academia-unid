@@ -1,16 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Semántico</title>
+    <title>Mi Página Personal</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #a8edea, #fed6e3, #f6d365);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff6b6b, #f7b267, #4ecdc4, #5f27cd);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.75);
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.05em;
+            transition: color 0.3s, background 0.3s;
+            padding: 8px 12px;
+            border-radius: 20px;
+        }
+
+        nav a:hover {
+            background-color: #ffffff33;
+            color: #ffe66d;
+        }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.92);
+            margin: 25px auto;
+            width: 90%;
+            max-width: 1100px;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+        }
+
+        h2 {
+            color: #5f27cd;
+            border-left: 8px solid #ff6b6b;
+            padding-left: 12px;
+        }
+
+        p, li {
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.04);
+        }
+
+        .youtube {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 700px;
+            height: 390px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+        }
+
+        .amigos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .tarjeta {
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            padding: 15px;
+            border-radius: 15px;
+            min-width: 180px;
+            flex: 1;
+            text-align: center;
+            font-weight: bold;
+            color: #222;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #ff6b6b;
+            color: white;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #e55050;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
 
-    <main>
-        <h1>Página inicial</h1>
-    </main>
+    <header>
+        <h1>Mi Página Web Personal</h1>
+        <p>Un sitio sobre mis gustos, intereses, tareas y amistades</p>
+    </header>
 
-    <script src="/app.js"></script>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#intereses">Intereses</a>
+        <a href="#pasatiempos">Pasatiempos</a>
+        <a href="#tareas">Tareas</a>
+        <a href="#amistades">Amistades</a>
+    </nav>
+
+    <section id="inicio">
+        <h2>Inicio</h2>
+        <p>
+            Bienvenido a mi página personal. Aquí encontrarás información sobre mis intereses,
+            mis pasatiempos, las tareas que he realizado en clases anteriores y algunas de mis amistades.
+            También agregué imágenes y videos para complementar el contenido.
+        </p>
+
+        <div class="galeria">
+            <img src="https://picsum.photos/seed/paisaje1/600/400" alt="Paisaje aleatorio 1">
+            <img src="https://picsum.photos/seed/paisaje2/600/400" alt="Paisaje aleatorio 2">
+            <img src="https://picsum.photos/seed/paisaje3/600/400" alt="Paisaje aleatorio 3">
+        </div>
+
+        <div class="youtube">
+            <iframe src="https://www.youtube.com/embed/2ePf9rue1Ao" title="Video de tecnología"></iframe>
+        </div>
+    </section>
+
+    <section id="intereses">
+        <h2>Intereses</h2>
+        <p>
+            Uno de mis principales intereses es aprender más sobre programación, diseño web
+            e inteligencia artificial. En el futuro me gustaría estudiar una carrera relacionada
+            con la tecnología y desarrollar proyectos innovadores que ayuden a las personas.
+        </p>
+        <p>
+            También me interesa viajar, conocer nuevos lugares y seguir aprendiendo cosas nuevas
+            cada día.
+        </p>
+
+        <div class="galeria">
+            <img src="https://picsum.photos/seed/estudio1/600/400" alt="Interés de estudio">
+            <img src="https://picsum.photos/seed/futuro2/600/400" alt="Interés futuro">
+        </div>
+
+        <p>
+            <a class="boton" href="https://www.youtube.com/watch?v=ad79nYk2keg" target="_blank">
+                Ver video sobre Inteligencia Artificial
+            </a>
+        </p>
+    </section>
+
+    <section id="pasatiempos">
+        <h2>Pasatiempos</h2>
+        <p>Estas son algunas actividades que disfruto hacer actualmente:</p>
+        <ul>
+            <li>Escuchar música</li>
+            <li>Jugar videojuegos</li>
+            <li>Ver series y películas</li>
+            <li>Navegar en internet</li>
+            <li>Salir con amigos</li>
+        </ul>
+
+        <div class="galeria">
+            <img src="https://picsum.photos/seed/hobby1/600/400" alt="Pasatiempo 1">
+            <img src="https://picsum.photos/seed/hobby2/600/400" alt="Pasatiempo 2">
+            <img src="https://picsum.photos/seed/hobby3/600/400" alt="Pasatiempo 3">
+        </div>
+
+        <p>
+            <a class="boton" href="https://www.youtube.com/watch?v=KLuTLF3x9sA" target="_blank">
+                Ver video relacionado
+            </a>
+        </p>
+    </section>
+
+    <section id="tareas">
+        <h2>Tareas</h2>
+        <p>
+            En esta sección se muestran algunas tareas y actividades realizadas en parciales anteriores.
+        </p>
+        <ul>
+            <li>Creación de una tabla en HTML</li>
+            <li>Uso de etiquetas básicas como títulos, párrafos, listas e imágenes</li>
+            <li>Formulario de registro</li>
+            <li>Inserción de enlaces y videos</li>
+            <li>Investigación sobre páginas web</li>
+            <li>Prácticas de diseño con colores y estilos</li>
+        </ul>
+
+        <div class="galeria">
+            <img src="https://picsum.photos/seed/tarea1/600/400" alt="Tarea 1">
+            <img src="https://picsum.photos/seed/tarea2/600/400" alt="Tarea 2">
+        </div>
+    </section>
+
+    <section id="amistades">
+        <h2>Amistades</h2>
+        <p>
+            En esta página coloco a algunas de mis amistades. Puedes cambiar estos nombres por los reales.
+        </p>
+
+        <div class="amigos">
+            <div class="tarjeta">Juan Pérez</div>
+            <div class="tarjeta">Ana López</div>
+            <div class="tarjeta">Carlos Martínez</div>
+            <div class="tarjeta">María González</div>
+            <div class="tarjeta">Luis Torres</div>
+        </div>
+
+        <div class="galeria">
+            <img src="https://picsum.photos/seed/amigos1/600/400" alt="Amistades 1">
+            <img src="https://picsum.photos/seed/amigos2/600/400" alt="Amistades 2">
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 - Página creada para una tarea escolar con apoyo de IA</p>
+    </footer>
+
 </body>
 </html>
